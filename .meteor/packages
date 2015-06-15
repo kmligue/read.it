@@ -6,7 +6,6 @@
 
 meteor-platform
 useraccounts:materialize
-accounts-password
 materialize:materialize
 iron:router
 iron:layout
@@ -14,3 +13,7 @@ jquery
 themeteorchef:jquery-validation
 reywood:publish-composite
 copleykj:livestamp
+accounts-facebook
+accounts-password
+service-configuration
+accounts-ui

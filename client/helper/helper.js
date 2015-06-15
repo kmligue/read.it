@@ -7,6 +7,9 @@ Template.registerHelper('getUsername', function(userId) {
 	if(user === undefined) {
 		return 'anonymous';
 	}
+	else if(user.username === undefined) {
+		return user.profile.name;
+	}
 	else {
 		return user.username;
 	}
