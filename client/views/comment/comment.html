@@ -1,0 +1,30 @@
+<template name="comment">
+	{{#if Template.subscriptionsReady}}
+		<div class="comment-wrapper">
+			<h5>{{commentsCount}} Comment/s</h5>
+			{{#each comments}}
+				<div class="comment-list">
+					{{#if commentOwner this.commentBy}}
+						<a class="waves-effect waves-light link destroy" href="#">Destroy</a>
+					{{/if}}
+					<div class="comment-content">{{ this.comment }}</div>
+					<div class="comment-summary">Submitted {{livestamp this.createdAt}} by {{getUsername this.commentBy}}</div>
+					<hr />
+				</div>
+			{{/each}}
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea id="comment" class="materialize-textarea"></textarea>
+							<label for="comment">Comment</label>
+						</div>
+					</div>
+					<button class="btn waves-effect waves-light" type="submit">Add Comment</button>
+				</form>
+			</div>
+		</div>
+	{{else}}
+		<p>Loading...</p>
+	{{/if}}
+</template>

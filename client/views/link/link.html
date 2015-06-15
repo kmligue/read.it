@@ -1,0 +1,34 @@
+<template name="link">
+	<div class="container">
+		{{#if Template.subscriptionsReady}}
+			
+			<ul class="collection">
+				<li class="collection-item avatar one-page">
+					<div class="link-summary">
+						<div class="upvote center-align">
+							{{#if alreadyVoted link._id}}
+							<a class="disabled" href="#">{{ link.upvote }} <p>upvote</p></a>
+							{{else}}
+								<a class="link-upvote" href="#">{{ link.upvote }} <p>upvote</p></a>
+							{{/if}}
+						</div>
+						<div class="downvote center-align">
+							{{#if alreadyVoted link._id}}
+								<a class="disabled" href="#">{{ link.downvote }} <p>downvote</p></a>
+							{{else}}
+								<a class="link-downvote" href="#">{{ link.downvote }} <p>downvote</p></a>
+							{{/if}}
+						</div>
+					</div>
+					<span class="title"><a class="link" href="{{ link.url }}" target="_blank">{{ link.title }}</a></span>
+					<p>Submitted {{livestamp link.createdAt}} by {{getUsername link.submittedBy}}</p>
+				</li>
+			</ul>
+
+			{{> comment}}
+
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</div>
+</template>

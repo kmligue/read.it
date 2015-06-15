@@ -1,0 +1,29 @@
+<template name="home">
+	<div class="container">
+		<ul class="collection">
+		{{#each links}}
+			<li class="collection-item avatar">
+				<div class="link-summary">
+					<div class="upvote center-align">
+						{{#if alreadyVoted this._id}}
+							<a class="disabled" href="#">{{ this.upvote }} <p>upvote</p></a>
+						{{else}}
+							<a class="link-upvote" href="#">{{ this.upvote }} <p>upvote</p></a>
+						{{/if}}
+					</div>
+					<div class="downvote center-align">
+						{{#if alreadyVoted this._id}}
+							<a class="disabled" href="#">{{ this.downvote }} <p>downvote</p></a>
+						{{else}}
+							<a class="link-downvote" href="#">{{ this.downvote }} <p>downvote</p></a>
+						{{/if}}
+					</div>
+					<div class="comments center-align"><a class="link-comments" href="/link/{{ this._id }}">{{ this.comments }} <p>comment/s</p></a></div>
+				</div>
+				<span class="title"><a class="link" href="{{ this.url }}" target="_blank">{{ this.title }}</a></span>
+				<p>Submitted {{livestamp this.createdAt}} by {{getUsername this.submittedBy}}</p>
+			</li>
+		{{/each}}
+		</ul>
+	</div>
+</template>

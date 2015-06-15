@@ -1,0 +1,11 @@
+<template name="register">
+	{{#unless currentUser}}
+		<div class="container center-align">
+			<div class="row"> 
+				<div class="col s8 offset-s2"> 
+					{{> atForm state="signUp"}}
+				</div>
+			</div>
+		</div>
+	{{/unless}}
+</template>

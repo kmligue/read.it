@@ -1,0 +1,71 @@
+.btn,
+.btn-large {
+	text-transform: none;
+}
+
+em.error {
+	color: #d32f2f;
+}
+
+.comment-wrapper {
+	margin-top: 60px;
+}
+
+a.link:hover {
+	color: #0277bd;
+	text-decoration: underline;
+}
+
+a.link-upvote,
+a.link-downvote,
+a.link-comments {
+	color: #616161;
+}
+
+a.link-upvote:hover,
+a.link-downvote:hover,
+a.link-comments:hover {
+	color: #212121;
+}
+
+a.disabled {
+	color: #b3b3b3;
+	cursor: default;
+}
+
+.collection .collection-item.avatar {
+	padding-left: 250px;
+}
+
+.collection .collection-item.one-page {
+	padding-left: 150px;
+}
+
+.link-summary {
+	position: absolute;
+	left: 10px;
+}
+
+.link-summary > div,
+.link-one-page-summary > div {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.comment-content {
+	font-size: 20px;
+}
+
+.comment-list {
+	position: relative;
+}
+
+.comment-summary {
+	font-size: 10px;
+	color: #9e9e9e;
+}
+
+a.destroy {
+	position: absolute;
+	right: 0;
+}
